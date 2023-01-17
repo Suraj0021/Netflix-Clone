@@ -19,3 +19,4 @@ Simple ott app which allows you to stream movies
 ![Screenshot_2023-01-17-12-08-20-811_com example netflix](https://user-images.githubusercontent.com/122522715/212830517-ee5dfcd8-5463-42c8-bd25-ca387e11ece2.jpg)
 
 
+![Screenshot_2023-01-17-12-29-57-709_com example netflix](https://user-images.githubusercontent.com/122522715/212830977-433e8c08-0f8b-4717-810e-8186a3621060.jpg)
