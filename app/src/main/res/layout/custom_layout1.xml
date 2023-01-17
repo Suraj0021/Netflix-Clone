@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="20dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardMaxElevation="20dp"
+    android:outlineAmbientShadowColor="@color/black"
+    android:outlineSpotShadowColor="@color/black"
+    android:id="@+id/cardMoviesAdapter"
+    app:cardBackgroundColor="@color/black">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:id="@+id/moviesLayout"
+    android:layout_width="100dp"
+    android:layout_height="155dp">
+
+
+    <ImageView
+        android:id="@+id/imgMovies"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/txtMoviesName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_weight="5"
+        android:gravity="center|top"
+        android:paddingTop="2dp"
+        android:paddingRight="2dp"
+        android:paddingLeft="2dp"
+        android:singleLine="true"
+        android:text="NetFlix"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:fontFamily="@font/francois_one"/>
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+

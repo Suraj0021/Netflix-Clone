@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trsns3"
+    android:orientation="vertical"
+    tools:context=".Activity.SearchActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/gray2"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/backToHome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_arrow_back_24" />
+
+        <EditText
+            android:id="@+id/serachMovie"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:drawableRight="@drawable/ic_baseline_search_white"
+            android:fontFamily="@font/francois_one"
+            android:gravity="center|left"
+            android:hint="Search..."
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:layout_margin="5dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/graylight"
+            android:textSize="18dp"
+            android:backgroundTint="@color/gray2"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMoviesFound"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/gray"
+        android:fontFamily="@font/francois_one"
+        android:paddingLeft="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMoviesList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:scrollbars="vertical" />
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_baseline_dashboard_white"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_movies"
+            android:icon="@drawable/ic_baseline_movie_white"
+            android:title="Movies" />
+        <item
+            android:id="@+id/nav_tv_shows"
+            android:icon="@drawable/ic_tv_white"
+            android:title="Top Rated" />
+        <item
+            android:id="@+id/nav_new_releases"
+            android:icon="@drawable/ic_baseline_movie_filter_24"
+            android:title="New Releases" />
+        <item
+            android:id="@+id/nav_category"
+            android:icon="@drawable/ic_category_white"
+            android:title="Category" />
+        <item
+            android:id="@+id/nav_reviews"
+            android:icon="@drawable/ic__star_rate"
+            android:title="Reviews" />
+        <item
+            android:id="@+id/nav_watchlist"
+            android:icon="@drawable/ic_watchlist_24"
+            android:title="Saved" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_history_24"
+            android:title="History" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_baseline_logout_24"
+            android:title="Logout" />
+    </group>
+</menu>

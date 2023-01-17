@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray2"
+    android:paddingBottom="50dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/francois_one"
+            android:padding="2dp"
+            android:text="  Add Review"
+            android:textColor="@color/red"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/closeReviewDialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:src="@drawable/ic_close_24" />
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/gray2">
+            <ImageView
+                android:visibility="gone"
+                android:background="@color/trsns3"
+                android:scaleType="centerCrop"
+                android:id="@+id/loadImageDialog"
+                android:layout_width="120dp"
+                android:layout_height="200dp"/>
+            <TextView
+                android:background="@color/trsns3"
+                android:id="@+id/movieName"
+                android:text="Select Movie Name *"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/francois_one"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:padding="5dp"/>
+
+            <RatingBar
+                android:background="@color/trsns3"
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:progressTint="@color/red"
+                android:progressBackgroundTint="@color/white"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:background="@color/trsns3"
+                android:id="@+id/addComment"
+                android:textColor="@color/white"
+                android:hint="Your Comment *"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/francois_one"
+                android:layout_margin="10dp"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:lines="3"
+                android:gravity="top|left"
+                android:layout_height="wrap_content"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/cancelReview"
+        android:textColor="@color/white"
+        android:text=" Cancel "
+        android:fontFamily="@font/francois_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"/>
+    <Button
+        android:id="@+id/submitReview"
+        android:textColor="@color/black"
+        android:text=" Submit "
+        android:fontFamily="@font/francois_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:backgroundTint="@color/white"/>
+</LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+

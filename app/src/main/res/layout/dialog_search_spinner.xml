@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Movie..."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:fontFamily="@font/francois_one"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@color/black"
+        />
+
+    <!-- Edit text to allow user to type name
+           of item he/she wants to search-->
+    <EditText
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text"
+        android:hint="Search..."
+        android:fontFamily="@font/francois_one"
+        android:singleLine="true"
+        android:background="@android:drawable/editbox_background"
+        android:textColor="@color/black"
+        android:layout_margin="5dp"
+        android:padding="15dp"
+        />
+
+    <!-- List view to insert list of items-->
+    <ListView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        />
+</LinearLayout>
