@@ -9,6 +9,7 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/loginCardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
@@ -25,13 +26,23 @@
             android:id="@+id/layoutLogin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:gravity="center|top"
             android:orientation="vertical"
             tools:viewBindingIgnore="true"
             android:background="@color/trsns"
            >
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/francois_one"
+                android:gravity="center|left"
+                android:padding="5dp"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="25dp"/>
 
             <com.google.android.material.textfield.TextInputLayout
                 xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -40,11 +51,10 @@
                 android:layout_height="wrap_content"
                 android:drawableRight="@drawable/ic_security_24"
                 android:gravity="center"
-                android:background="@color/trsns"
+                android:background="@drawable/border1"
                 app:hintTextColor="@color/red"
                 android:textColorHint="@color/white"
-                android:layout_marginTop="10dp"
-                android:paddingTop="10dp">
+               >
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/email"
@@ -69,12 +79,12 @@
                 app:passwordToggleEnabled="true"
                 android:drawableLeft="@drawable/ic_security_24"
                 android:gravity="center"
-                android:background="@color/trsns"
+                android:background="@drawable/border1"
                 app:passwordToggleTint="@color/white"
                 app:hintTextColor="@color/red"
                 android:textColorHint="@color/white"
-                android:layout_marginTop="10dp"
-                android:paddingTop="10dp">
+                android:layout_marginTop="20dp"
+                android:foregroundTint="@color/white">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/password"
@@ -88,13 +98,14 @@
                     android:drawableTint="@color/white"
                     android:fontFamily="@font/francois_one"
                     android:textColor="@color/white"
-                    android:textColorHint="@color/white"/>
+                    android:textColorHint="@color/white"
+                    android:foregroundTint="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
             <Button
                 android:id="@+id/BtnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
-                android:layout_margin="30dp"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/red"
                 android:fontFamily="@font/francois_one"
                 android:padding="10dp"
@@ -103,14 +114,14 @@
                 android:textSize="16dp"
                 android:textStyle="bold"/>
 
+
             <TextView
-                android:visibility="gone"
                 android:id="@+id/txtCreateAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:fontFamily="@font/francois_one"
-                android:gravity="center"
+                android:gravity="center|right"
                 android:padding="5dp"
                 android:text="Create Account"
                 android:textColor="@color/white"
@@ -118,5 +129,147 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/signUpCardView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:outlineAmbientShadowColor="@color/gray"
+        android:outlineSpotShadowColor="@color/gray"
+        app:cardBackgroundColor="@color/trsns"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="10dp"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:id="@+id/layoutCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/francois_one"
+                android:gravity="center|right"
+                android:padding="5dp"
+                android:text="Sign Up "
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+
+            <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/etPasswordLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border1"
+                android:drawableRight="@drawable/ic_security_24"
+                android:gravity="center"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/red">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/email2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/trsns3"
+                    android:drawableRight="@drawable/ic_mail_24"
+                    android:drawableTint="@color/white"
+                    android:fontFamily="@font/francois_one"
+                    android:gravity="center"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/etPasswordLayout22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border1"
+                android:drawableLeft="@drawable/ic_security_24"
+                android:gravity="center"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/red"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/password2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/trsns3"
+                    android:drawableLeft="@drawable/ic_security_24"
+                    android:drawableTint="@color/white"
+                    android:fontFamily="@font/francois_one"
+                    android:gravity="center"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/etPasswordLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border1"
+                android:drawableLeft="@drawable/ic_security_24"
+                android:gravity="center"
+                android:textColorHint="@color/white"
+                app:hintTextColor="@color/red"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/confirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/trsns3"
+                    android:drawableLeft="@drawable/ic_security_24"
+                    android:drawableTint="@color/white"
+                    android:fontFamily="@font/francois_one"
+                    android:gravity="center"
+                    android:hint="Confirm Password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/BtnSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/red"
+                android:fontFamily="@font/francois_one"
+                android:padding="10dp"
+                android:text="Create Account"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtLoginAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/francois_one"
+                android:gravity="center|left"
+                android:padding="5dp"
+                android:text=" I Have Account"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </FrameLayout>

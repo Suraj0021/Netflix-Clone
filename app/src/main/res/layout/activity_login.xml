@@ -8,7 +8,6 @@
     tools:context=".Activity.LoginActivity">
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,52 +16,21 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="4"
             android:background="@drawable/netflix"
-            android:scaleType="centerCrop"
-            android:layout_weight="4"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="4.2"
-            android:orientation="horizontal"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:background="@color/red">
+            android:scaleType="centerCrop" />
 
 
-            <Button
-                android:id="@+id/logInButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/black"
-                android:fontFamily="@font/francois_one"
-                android:text="Login"
-                android:textColor="@color/white"
-                android:textSize="15dp" />
-
-            <Button
-                android:id="@+id/signInButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/red"
-                android:fontFamily="@font/francois_one"
-                android:text="Sign Up"
-                android:textColor="@color/white"
-                android:textSize="15dp" />
-        </LinearLayout>
-
-
-        <androidx.fragment.app.FragmentContainerView
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <androidx.fragment.app.FragmentContainerView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/fragment_container_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1.2"
             android:layout_margin="10dp"
-            android:padding="10dp"/>
+            android:layout_weight="1.2"
+            android:padding="10dp" />
     </LinearLayout>
 
 

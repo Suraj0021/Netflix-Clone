@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import com.example.netflix.R
@@ -47,93 +48,26 @@ class LoginActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
-        loginButton = findViewById(R.id.logInButton)
-        signinButton = findViewById(R.id.signInButton)
-
-        loginButton.setOnClickListener {
-
-        }
-        signinButton.setOnClickListener {
-
-        }
-
-        loginButton.setOnClickListener {
 
 
-            val animator1 = ObjectAnimator.ofFloat(loginButton, "scaleX", 0.9f, 1.1f)
-            val animator2 = ObjectAnimator.ofFloat(loginButton, "scaleY", 0.9f, 1.1f)
 
-            val set = AnimatorSet()
-            set.playTogether(animator1, animator2)
-            set.duration = 500
-            set.start()
-            signinButton.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.red))
-            loginButton.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.black))
-            supportFragmentManager.commit {
-                replace<LoginFragment>(R.id.fragment_container_view)
-                setReorderingAllowed(true)
-            }
-            var data = true
-//            if (username.text.toString().isEmpty()) {
-//                username.setError("invalid name")
-//                data = false
-//            }
-//            if (password.text.toString().isEmpty()) {
-//                password.setError("invalid password")
-//                data = false
-//            }
-//            if (password.text.toString().length < 5) {
-//                password.setError("very short")
-//                data = false
-//            }
+
+//            val animator1 = ObjectAnimator.ofFloat(loginButton, "scaleX", 0.9f, 1.1f)
+//            val animator2 = ObjectAnimator.ofFloat(loginButton, "scaleY", 0.9f, 1.1f)
 //
-//            if (data) {
-//                signIn(username.text.toString(), password.text.toString())
+//            val set = AnimatorSet()
+//            set.playTogether(animator1, animator2)
+//            set.duration = 500
+//            set.start()
+//            signinButton.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.red))
+//            loginButton.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.black))
+//            supportFragmentManager.commit {
+//                replace<LoginFragment>(R.id.fragment_container_view)
+//                setReorderingAllowed(true)
 //            }
 
-        }
-        signinButton.setOnClickListener {
-
-            val animator1 = ObjectAnimator.ofFloat(signinButton, "scaleX", 0.9f, 1f)
-            val animator2 = ObjectAnimator.ofFloat(signinButton, "scaleY", 0.9f, 1f)
-
-            val set = AnimatorSet()
-            set.playTogether(animator1, animator2)
-            set.duration = 500
-            set.start()
-            signinButton.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.black))
-            loginButton.backgroundTintList = ColorStateList.valueOf(resources.getColor(R.color.red))
-
-
-            supportFragmentManager.commit {
-                replace<SignupFragment>(R.id.fragment_container_view)
-                setReorderingAllowed(true)
-            }
-
-//            var data = true
-//            if (username2.text.toString().isEmpty()) {
-//                username2.setError("invalid name")
-//                data = false
-//            }
-//            if (password2.text.toString().isEmpty()) {
-//                password2.setError("invalid password")
-//                data = false
-//            }
-//            if (password2.text.toString().length < 5) {
-//                password2.setError("very short")
-//                data = false
-//            }
 //
-//            if (!confirm.text.toString().equals(password2.text.toString())) {
-//                confirm.setError("not Matching")
-//                data = false
-//            }
-//            if (data) {
-//                createAccount(username2.text.toString(), password2.text.toString())
-//            }
-
         }
-    }
 
     public override fun onStart() {
         super.onStart()
@@ -143,6 +77,7 @@ class LoginActivity : AppCompatActivity() {
             reload()
         }
     }
+
 
     private fun createAccount(email: String, password: String) {
         // [START create_user_with_email]
@@ -198,5 +133,18 @@ class LoginActivity : AppCompatActivity() {
     private fun reload() {
         startActivity(Intent(this@LoginActivity, MainActivity::class.java).putExtra("splashScreen", "splashScreen"))
         finish()
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("Exit")
+            .setMessage("Do You Want To Exit?")
+            .setPositiveButton(android.R.string.ok) { dialog, whichButton ->
+                super.onBackPressed()
+            }
+            .setNegativeButton(android.R.string.cancel) { dialog, whichButton ->
+
+            }
+            .show()
     }
 }
