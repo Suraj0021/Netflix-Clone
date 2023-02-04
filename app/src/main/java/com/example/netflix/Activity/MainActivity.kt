@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         var toolbar: Toolbar = findViewById(R.id.toolbar)
         drawer = findViewById(R.id.drawer_layout)
         val toggle = ActionBarDrawerToggle(this, drawer, toolbar, R.string.open, R.string.close)
-        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white))
+        toggle.drawerArrowDrawable.color = getResources().getColor(R.color.white)
         drawer.addDrawerListener(toggle)
         toggle.syncState()
 

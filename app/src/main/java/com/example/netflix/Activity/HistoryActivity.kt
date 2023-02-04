@@ -195,6 +195,8 @@ class HistoryActivity : AppCompatActivity() {
             override fun onCancelled(error: DatabaseError) {
                 // Failed to read value
                 Log.w("TAG", "Failed to read value.", error.toException())
+                progressBar.visibility = android.view.View.GONE
+
             }
         })
 

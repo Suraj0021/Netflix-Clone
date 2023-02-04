@@ -29,10 +29,8 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
-
-
-
     lateinit var loginButton: Button
+
     lateinit var signinButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {

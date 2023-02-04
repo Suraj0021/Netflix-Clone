@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View.VISIBLE
 import android.view.Window
 import android.widget.*
@@ -206,7 +207,9 @@ class ReviewActivity : AppCompatActivity() {
                     val name = review.child("movieName").value as String
                     val comment = review.child("comment").value as String
                     val rating = review.child("ratings").value as String
+                    Log.d("tags",""+comment);
                     movieReviews.add(ReviewDataClass(email, image, name, comment, rating))
+                    Toast.makeText(this@ReviewActivity, ""+comment, Toast.LENGTH_SHORT).show()
                 }
 
                 val adapter =
@@ -219,8 +222,9 @@ class ReviewActivity : AppCompatActivity() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                // An error occurred
                 println(error.toException())
+                progressBar.visibility = android.view.View.GONE
+
             }
         })
 

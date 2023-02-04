@@ -97,7 +97,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
 
         binding.BtnSignUp.setOnClickListener {
-
+            Toast.makeText(context, "Authentication failed.", Toast.LENGTH_SHORT).show()
 
             val animator1 = ObjectAnimator.ofFloat(binding.BtnSignUp, "scaleX", 0.9f, 1.1f)
             val animator2 = ObjectAnimator.ofFloat(binding.BtnSignUp, "scaleY", 0.9f, 1.1f)
@@ -108,14 +108,14 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             set.start()
 
 
-            var name = binding.email.text.toString()
+            var name = binding.email2.text.toString()
             var password = binding.password2.text.toString()
             var confirm = binding.confirmPassword.text.toString()
 
             var data = true
 
             if (name.equals("")) {
-                binding.email.error = "invalid"
+                binding.email2.error = "invalid"
                 data = false
             }
             if (password.equals("")) {
@@ -134,10 +134,11 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             }
             if (!isValidEmail(name)) {
                 data = false
-                binding.email.error = "invalid"
+                binding.email2.error = "invalid"
             }
 
             if (data) {
+
                 createAccount(name, password)
             }
 
@@ -157,6 +158,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("TAG", "createUserWithEmail:success")
                     val user = auth.currentUser
+
                     val intent = Intent(context, MainActivity::class.java)
                     startActivity(intent)
                 } else {
